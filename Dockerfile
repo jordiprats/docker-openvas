@@ -10,6 +10,9 @@ RUN DEBIAN_FRONTEND=noninteractive ;\
 	vim \
 	wget
 
+RUN DEBIAN_FRONTEND=noninteractive ; add-apt-repository ppa:mrazavi/openvas
+RUN DEBIAN_FRONTEND=noninteractive ; apt-get update
+
 CMD /bin/bash /usr/local/bin/runme.sh
 
 EXPOSE 443
