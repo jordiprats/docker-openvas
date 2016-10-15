@@ -38,10 +38,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update
 # 
 # You have to update openvas scripts/data after installation with the following commands:
 # 
-# sudo apt-get install sqlite3
-# sudo openvas-nvt-sync
-# sudo openvas-scapdata-sync
-# sudo openvas-certdata-sync
+RUN DEBIAN_FRONTEND=noninteractive apt-get install sqlite3 \
+		openvas-nvt-sync \
+		openvas-scapdata-sync \
+		openvas-certdata-sync
 # 
 # sudo service openvas-scanner restart
 # sudo service openvas-manager restart
